@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4708133111525255990, guid: 23edfab2800503e46a9c0640fcce2acc, type: 3}
       propertyPath: m_Name
-      value: Apple
+      value: Apple Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23edfab2800503e46a9c0640fcce2acc, type: 3}

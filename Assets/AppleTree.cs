@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AppleTree : MonoBehavior {
+public class AppleTree : MonoBehaviour {
     
     //Prefab for instantiating apples
     public GameObject applePrefab;
