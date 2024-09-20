@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applePrefab: {fileID: 8628717721871295647, guid: 23edfab2800503e46a9c0640fcce2acc, type: 3}
+  rottenApplePrefab: {fileID: 5332227795260737062, guid: 97f245323ed6e0b4b9db384af13d47ab, type: 3}
   speed: 1
   leftAndRightEdge: 10
   changeDirChance: 0.1
