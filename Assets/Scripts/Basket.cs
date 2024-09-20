@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Basket : MonoBehaviour
 {
@@ -44,6 +45,10 @@ public class Basket : MonoBehaviour
             //Increase the score
             scoreCounter.score += 100;
             HighScore.TRY_SET_HIGH_SCORE( scoreCounter.score );
+        }
+        else if ( collideWith.CompareTag("RottenApple")) {
+            Destroy( collideWith );
+            SceneManager.LoadScene( "Start_Scene" );
         }
     }
 }

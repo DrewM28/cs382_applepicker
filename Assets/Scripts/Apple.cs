@@ -5,6 +5,7 @@ using UnityEngine;
 public class Apple : MonoBehaviour
 {
     public static float     bottomY = -20f;
+    private ScoreCounter scoreCounter;
 
     // Update is called once per frame
     void Update()
@@ -16,6 +17,12 @@ public class Apple : MonoBehaviour
             ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
             //Call the public AppleMissed() method of script
             apScript.AppleMissed();
+        }
+    }
+
+    public void OnCatch() {
+        if ( CompareTag( "RottenApple" )) {
+  
         }
     }
 }

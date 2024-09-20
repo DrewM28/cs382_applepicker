@@ -8,6 +8,7 @@ public class AppleTree : MonoBehaviour
 
     //Prefab fro instantiating apples
     public GameObject applePrefab;
+    public GameObject rottenApplePrefab;
 
     //Speed at which the apple tree moves
     public float speed = 1f;
@@ -19,7 +20,7 @@ public class AppleTree : MonoBehaviour
     public float changeDirChance = 0.1f;
 
     //Seconds between apples instantiations
-    public float appleDropDelay = 1f;
+    public float appleDropDelay = 0.5f;
 
 
     // Start is called before the first frame update
@@ -30,7 +31,17 @@ public class AppleTree : MonoBehaviour
     }
 
     void DropApple() {
-        GameObject apple = Instantiate<GameObject>( applePrefab );
+        GameObject apple;
+        float randomValue = Random.value;
+
+        if ( randomValue < 0.2f ) {
+            apple = Instantiate( rottenApplePrefab );
+            apple.tag = "RottenApple";
+        }
+        else {
+            apple = Instantiate( applePrefab );
+            apple.tag = "Apple";
+        }
         apple.transform.position = transform.position;
         Invoke( "DropApple", appleDropDelay );
     }
