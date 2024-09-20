@@ -40,7 +40,7 @@ public class ApplePicker : MonoBehaviour
         GameObject[] appleArray=GameObject.FindGameObjectsWithTag("Apple");
         foreach ( GameObject tempGO in appleArray ) {
             if ( tempGO.CompareTag("Apple")) {
-                Destroy ( tempGO.CompareTag("Apple") );
+                Destroy ( tempGO );
             }
         }
 
